@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--Hemos implementado BOOTSTRAP 5 para la página-->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" id="logo" href="#">JINX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#formul"
+        aria-controls="formul" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="formul">
+        <!--menú-->
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Campeones</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Nueva Season
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item text-dark" href="#">Objetos</a></li>
+              <li><a class="dropdown-item text-dark" href="#">Nuevas Sking</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-dark" href="#">Campeones Odiados</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Contactanos
+            </a>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" >Contactanos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-header">
+                    ¿Tuviste algún problema?, necesitas ayuda, Contacta con nosotros.
+                    Envianos un formulario con tu problema.
+                  </div>
+                  <div class="modal-body">
+
+                     <!--Formulario-->
+                    <form id="contactForm">
+
+                      <!-- Name input -->
+                      <div class="mb-3">
+                        <label class="form-label" for="name">Nombre</label>
+                        <input class="form-control" id="Nombre" type="text" placeholder="Nombre" />
+                      </div>
+                      <!-- apellidos input -->
+                      <div class="mb-3">
+                        <label class="form-label" for="Apellidos">Apellidos</label>
+                        <input class="form-control" id="apellidos" type="text" placeholder="Apellidos" />
+                      </div>
+                      <!--Telefono-->
+                      <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                      </div>
+                      <!-- Email address input -->
+                      <div class="mb-3">
+                        <label class="form-label" for="emailAddress">Correo electrónico</label>
+                        <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" />
+                      </div>
+
+                      <!-- Message input -->
+                      <div class="mb-3">
+                        <label class="form-label" for="message">Mensaje</label>
+                        <textarea class="form-control" id="message" type="text" placeholder="Message"
+                          style="height: 10rem;"></textarea>
+                      </div>
+
+                      <!-- Form submit button -->
+                      <div class="d-grid">
+                        <button class="btn btn-primary btn-lg" type="submit">Enviar</button>
+                      </div>
+
+                    </form>
+                     <!--Fin Formulario-->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!--Buscador-->
+        <form class="d-flex">
+          <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-secondary text-white" type="submit">Buscador</button>
+        </form>
+         <!--Fin Buscador-->
+      </div>
+    </div>
+    </div>
+  </nav>
+  <!--Carrousel-->
+  <div class="container-xxl">
+    <div class="container-xxl ma">
+      <div id="carrusel" class="carousel  slide carousel-fade mb-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner mt-1">
+          <div class="carousel-item active">
+            <!--Video-->
+            <video class="d-block w-100" autoplay loop muted>
+              <source src="Season_2024.mp4" type="video/mp4" />
+            </video>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Temporada 2024</h5>
+              <p>Presentación sobre la nueva temprada 2024</p>
+            </div>
+          </div>
+          <!--imagenes-->
+          <div class="carousel-item">
+            <img src="https://images3.alphacoders.com/132/1327236.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Gwen Hacedora de mitos</h5>
+              <p>Nueva Skin de Gwen, hacedora de mitos.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://pbs.twimg.com/media/GDfF8bMXIAIvbwl?format=jpg&name=4096x4096" class="d-block w-100"
+              alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Viejo Yasuo</h5>
+              <p>Presentación sobre la nueva Skin de Yasuo.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+     <!--Fin Carrousel-->
+    <!--Elemento card-->
+    <div class="conteiner-xxl mx-2">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="titulo">Noticias</h3>
+          <hr>
+        </div>
+        <div class="col-sm-6 col-lg-12">
+          <div class="card mb-3">
+            <a class="text-decoration-none text-dark" href="#">
+              <div class="row g-0 ">
+                <div class="col-lg-4 col-xl-3">
+                  <img
+                    src="https://esports.as.com/2024/01/13/league-of-legends/lec/Elyoya_1756634320_1197144_319x180.jpg"
+                    class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-lg-8 col-xl-9">
+                  <div class="card-body">
+                    <h5 class="card-title">MAD Lions KOI se lleva el primer derbi español de LEC 24</h5>
+                    <p class="card-text">El equipo de Elyoya y otros tres españoles ha debutado en LEC con victoria,
+                      algo que también ha conseguido Giantx en su regreso a la élite continental.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-12">
+          <div class="card mb-3">
+            <a class="text-decoration-none text-dark" href="#">
+              <div class="row g-0 ">
+                <div class="col-lg-4 col-xl-3">
+                  <img
+                    src="https://esports.as.com/2024/01/12/league-of-legends/Cambios-parche-LoL_1756334351_1196806_319x180.jpg"
+                    class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-lg-8 col-xl-9">
+                  <div class="card-body">
+                    <h5 class="card-title">Llega el primer hotfix del parche 14.1: cambios de emergencia con buffs y
+                      nerfs</h5>
+                    <p class="card-text">Riot Games ha decidido aplicar un parche 14.1B para corregir todo lo que se les
+                      ha ido de las manos en esta primera versión de la temporada 2024. Habrá un montón de ajustes a
+                      campeones y objetos.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-12">
+          <div class="card mb-3">
+            <a class="text-decoration-none text-dark" href="#">
+              <div class="row g-0 ">
+                <div class="col-lg-4 col-xl-3">
+                  <img
+                    src="https://esports.as.com/2024/01/11/league-of-legends/Yasuo-viejo-cinematica-League-Legends_1756034399_1196704_319x180.jpg"
+                    class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-lg-8 col-xl-9">
+                  <div class="card-body">
+                    <h5 class="card-title">La nueva skin de Yasuo de la cinemática 2024 que podría cambiarlo todo</h5>
+                    <p class="card-text">El lore de League of Legends tiene más impacto e importancia que nunca en el
+                      propio videojuego y Riot quiere darle una vuelta a todo el universo con el objetivo de cambiarlo
+                      todo tras Arcane.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-12">
+          <div class="card mb-3">
+            <a class="text-decoration-none text-dark" href="#">
+              <div class="row g-0 ">
+                <div class="col-lg-4 col-xl-3">
+                  <img
+                    src="https://esports.as.com/2024/01/10/league-of-legends/Splashart-Smolder_1755734412_1196036_319x180.jpg"
+                    class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-lg-8 col-xl-9">
+                  <div class="card-body">
+                    <h5 class="card-title">Habilidades de Smolder: el nuevo ADC dragón de League of Legends</h5>
+                    <p class="card-text">Riot Games ha oficializado las habilidades de Smolder, el adorable nuevo dragón
+                      de League of Legends. Abajo te dejamos los vídeos de las habilidades, la descripción y todo lo
+                      necesario para empezar a aprender a jugarlo.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--cierre Elemento card-->
+      <!--Navegacion de páginas-->
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link bg-dark text-white" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link  bg-dark text-white" href="#">1</a></li>
+          <li class="page-item"><a class="page-link  bg-dark text-white" href="#">2</a></li>
+          <li class="page-item"><a class="page-link  bg-dark text-white" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link bg-dark text-white" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!--Fin Navegacion de páginas-->
+    </div>
+  </div>
+  
+  <!--Footer-->
+  <footer>
+    <div class="container-fluid bg-dark p-5">
+      <div class="conteiner-lg">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="row mb-3">
+            <div class="col-12">
+          <a href="#" class="text-decoration-none text-white"><h5>Contacto</h5></a>
+          </div><div class="col-6 col-sm-12">
+          <a href="#" class="text-decoration-none text-white mx-3">jinx.sl@gmail.com</a>
+          </div><div class="col-6 col-sm-12">
+          <a href="#" class="text-decoration-none text-white mx-3">721-7333-346</a>
+          </div></div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="row mb-3">
+            <div class="col-12">
+          <a href="#" class="text-decoration-none text-white "><h5>Redes</h5></a>
+          </div><div class="col-6 col-sm-12">
+          <a href="#" class="text-decoration-none text-white mx-3">Facebook</a>
+          </div><div class="col-6 col-sm-12">
+          <a href="#" class="text-decoration-none text-white mx-3">Instagram</a>
+          </div></div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="row mb-3">
+            <div class="col-12">
+          <a href="#" class="text-decoration-none text-white"><h5>Redes</h5></a>
+          </div><div class="col-6 col-sm-12">
+          <a href="#" class="text-decoration-none text-white mx-3">Madrid </a>
+          </div><div class="col-6 col-sm-12">
+          <a href="#" class="text-decoration-none text-white mx-3">Alicante</a>
+          </div></div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="row mb-3">
+            <div class="col-12">
+          <a href="#" class="text-decoration-none text-white"><h5>Patrocinadores</h5></a>
+          </div><div class="col-6 col-sm-12">
+          <a href="#" class="text-decoration-none text-white mx-3">Eneryeti</a>
+          </div><div class="col-6 col-sm-12">
+          <a href="#" class="text-decoration-none text-white mx-3">Lays</a>
+          </div></div>
+        </div>
+         <!-- Copyright -->
+       <div class="text-center mt-3 text-white">
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" >JINX.SL.com</a>
+      </div>
+      <!--Fin Copyright -->
+      </div>
+    </div>
+    </div>
+  </footer>
+   <!--Fin Footer-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
